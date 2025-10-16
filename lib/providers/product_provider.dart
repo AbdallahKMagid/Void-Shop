@@ -4,6 +4,7 @@ import 'package:shoppy/services/products_service.dart';
 
 class ProductProvider extends ChangeNotifier {
   ProductsModel? productsModel;
+  ProductsModel? categoryProductsModel;
   ProductsModel? cartModel;
   String? selectedImage;
   bool isLoading = false;
@@ -13,7 +14,6 @@ class ProductProvider extends ChangeNotifier {
   List searchedProducts = [];
   bool isSearching = false;
   String currentSortOption = "none";
-  ProductsModel? categoryProductsModel;
 
   void setCurrentIndex(int index) {
     currentIndex = index;
@@ -54,11 +54,11 @@ class ProductProvider extends ChangeNotifier {
         notifyListeners();
         return response.categories!;
       } else {
-        debugPrint("Unexpected categories response: ${response.categories}");
+        print("Unexpected categories response: ${response.categories}");
         return [];
       }
     } catch (e) {
-      debugPrint("Error fetching categories: $e");
+      print("Error fetching categories: $e");
       return [];
     }
   }
@@ -141,18 +141,19 @@ class ProductProvider extends ChangeNotifier {
 
   void sortProducts(String option) {
     currentSortOption = option;
-    if (productsModel == null || productsModel!.products!.isEmpty) return;
+    List products = productsModel!.products!;
+    if (productsModel == null || products.isEmpty) return;
 
     if (option == 'none') {
       fetchProducts();
       return;
     }
     if (option == 'title') {
-      productsModel!.products!.sort(
+      products.sort(
         (a, b) => a['title'].toString().compareTo(b['title'].toString()),
       );
     } else if (option == 'price') {
-      productsModel!.products!.sort(
+      products.sort(
         (a, b) => a['price'].toDouble().compareTo(b['price'].toDouble()),
       );
     }

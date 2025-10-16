@@ -5,15 +5,15 @@ class ProductsModel {
 
   ProductsModel({this.products, this.categories, this.cart});
 
-  factory ProductsModel.getJson({required dynamic json}) {
+  factory ProductsModel.getJson({required Map json}) {
     return ProductsModel(products: json["products"]);
   }
 
-  factory ProductsModel.getJsonCategories(dynamic categories) {
+  factory ProductsModel.getJsonCategories(List categories) {
     return ProductsModel(categories: categories);
   }
 
-  factory ProductsModel.getJsonCart(dynamic cart) {
+  factory ProductsModel.getJsonCart(List cart) {
     return ProductsModel(cart: cart);
   }
 }

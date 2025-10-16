@@ -46,13 +46,7 @@ class AllProductsScreen extends StatelessWidget {
                     value: provider.currentSortOption,
                     alignment: Alignment.centerRight,
                     items: [
-                      DropdownMenuItem(
-                        value: 'none',
-                        child: Text(
-                          'No Sort',
-                          style: TextStyle(color: MyColors.mainColor),
-                        ),
-                      ),
+                      DropdownMenuItem(value: 'none', child: Text('No Sort')),
                       DropdownMenuItem(
                         value: 'title',
                         child: Text('Sort by Title (A-Z)'),
