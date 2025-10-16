@@ -143,6 +143,10 @@ class ProductProvider extends ChangeNotifier {
     currentSortOption = option;
     if (productsModel == null || productsModel!.products!.isEmpty) return;
 
+    if (option == 'none') {
+      fetchProducts();
+      return;
+    }
     if (option == 'title') {
       productsModel!.products!.sort(
         (a, b) => a['title'].toString().compareTo(b['title'].toString()),
