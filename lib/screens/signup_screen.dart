@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:shoppy/providers/auth_provider.dart';
-import 'package:shoppy/screens/all_product_screen.dart';
+import 'package:shoppy/screens/welcomin_screen.dart';
 import 'package:shoppy/widgets/text_form_field.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -154,8 +154,7 @@ class SignupScreen extends StatelessWidget {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) =>
-                                            AllProductsScreen(),
+                                        builder: (context) => WelcomingScreen(),
                                       ),
                                     );
                                   } else {
