@@ -54,7 +54,6 @@ class SearchProductWidget extends StatelessWidget {
 
             const SizedBox(width: 12),
 
-            // 📄 Product Info
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
