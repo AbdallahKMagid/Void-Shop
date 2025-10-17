@@ -66,13 +66,10 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           horizontal: 16.0,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14.0),
+          borderRadius: BorderRadius.circular(11.0),
           borderSide: BorderSide(color: MyColors.primaryColor),
         ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14.0),
-          borderSide: BorderSide(color: Theme.of(context).primaryColor),
-        ),
+        focusedBorder: InputBorder.none,
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14.0),
           borderSide: BorderSide(color: MyColors.secondaryColor),
