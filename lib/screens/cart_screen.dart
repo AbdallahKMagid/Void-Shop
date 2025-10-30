@@ -29,7 +29,7 @@ class CartScreen extends StatelessWidget {
       ),
       body: Consumer<ProductProvider>(
         builder: (context, providerObj, child) {
-          final cartItems = providerObj.cart ?? [];
+          final cartItems = providerObj.cart;
 
           if (cartItems.isEmpty) {
             return const Center(
