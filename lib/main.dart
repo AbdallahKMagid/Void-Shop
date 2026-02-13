@@ -9,9 +9,9 @@ import 'my_colors.dart';
 
 Future<void> main() async {
   await Supabase.initialize(
-    url: 'https://qsprnnneosjkwpgtghxl.supabase.co',
+    url: 'https://kvkgcvdozajsdxwimdfq.supabase.co',
     anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcHJubm5lb3Nqa3dwZ3RnaHhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg5NzY4NzgsImV4cCI6MjA3NDU1Mjg3OH0.kEtH6cLb6WGwdpO47QxX2JDKha77kArQ9UEZk4QYS5c',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2a2djdmRvemFqc2R4d2ltZGZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5MzcxODAsImV4cCI6MjA4NjUxMzE4MH0.0kIiP_A6GUsw3gpHFs0NQM9LPNUiYWXD-T1D0aRksp0',
   );
   WidgetsFlutterBinding.ensureInitialized();
 
